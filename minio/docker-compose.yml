@@ -1,0 +1,48 @@
+version: '2'
+
+services:
+
+  minio1:
+    image: minio/minio
+    volumes:
+      - "data1:/export"
+    ports:
+      - "9001:9000"
+    environment:
+      - "MINIO_ACCESS_KEY=minio"
+      - "MINIO_SECRET_KEY=minio123"
+    command: server http://minio{1...4}/export
+
+  minio2:
+    image: minio/minio
+    volumes:
+      - "data2:/export"
+    environment:
+      - "MINIO_ACCESS_KEY=minio"
+      - "MINIO_SECRET_KEY=minio123"
+    command: server http://minio{1...4}/export
+
+  minio3:
+    image: minio/minio
+    volumes:
+      - "data3:/export"
+    environment:
+      - "MINIO_ACCESS_KEY=minio"
+      - "MINIO_SECRET_KEY=minio123"
+    command: server http://minio{1...4}/export
+
+  minio4:
+    image: minio/minio
+    volumes:
+      - "data4:/export"
+    environment:
+      - "MINIO_ACCESS_KEY=minio"
+      - "MINIO_SECRET_KEY=minio123"
+    command: server http://minio{1...4}/export
+
+
+volumes:
+  data1: {}
+  data2: {}
+  data3: {}
+  data4: {}

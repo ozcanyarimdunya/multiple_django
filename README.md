@@ -73,3 +73,25 @@ server {
     listen 80;
 }
 ```
+
+## Usage
+
+1. Run minio storage
+    ```
+    cd minio
+    docker-compose up -d --build
+    ```
+
+2. Run each django projects
+    ```
+    cd django{1,2,3}
+    docker-compose up -d --build
+    ```
+
+3. Run home application
+    ```
+    cd home
+    docker-compose up -d --build
+    ```
+
+4. Now check [http://localhost](http://localhost) and test it.
