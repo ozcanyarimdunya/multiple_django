@@ -1,0 +1,17 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Django 1</title>
+  <link rel="stylesheet" href="{% static 'site.css' %}">
+</head>
+<body>
+<div class="main">
+  <h3>Welcome to <strong>Django 1</strong></h3>
+  {% block content %}
+  {% endblock content %}
+</div>
+<script src="{% static 'site.js' %}"></script>
+</body>
+</html>

@@ -1,0 +1,13 @@
+html {
+    font-family: "Roboto", "Lucida Grande", "DejaVu Sans", "Bitstream Vera Sans", Verdana, Arial, sans-serif;
+}
+
+.main {
+    text-align: center;
+    padding: 40px;
+    border: grey 1px solid;
+}
+
+.main h3 {
+    color: brown;
+}
