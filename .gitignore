@@ -22,5 +22,6 @@ instance/
 .venv
 venv/
 venv.bak/
+.vscode/
 .vscode/*
 !.vscode/settings.json
