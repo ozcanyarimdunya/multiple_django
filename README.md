@@ -8,7 +8,7 @@ Rest is configuring base url prefix for each django project and configure nginx 
 
 **django_1**
 
-urls.py
+*urls.py*
 ```
 urlpatterns = [
     path('v1/', index, name='index'),
@@ -19,7 +19,7 @@ urlpatterns = [
 
 **django_2**
 
-urls.py
+*urls.py*
 ```
 urlpatterns = [
     path('v2/', index, name='index'),
@@ -30,7 +30,7 @@ urlpatterns = [
 
 **django_3**
 
-urls.py
+*urls.py*
 ```
 urlpatterns = [
     path('v3/', index, name='index'),
@@ -82,7 +82,7 @@ server {
     docker-compose up -d --build
     ```
 
-2. Run each django projects
+2. Run each django projects (**DO NOT** FORGET TO CHANGE `MINIO_STORAGE_ENDPOINT` IN EACH DJANGO PROJECT'S `.env` FILE)
     ```
     cd django{1,2,3}
     docker-compose up -d --build
